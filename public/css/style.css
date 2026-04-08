@@ -1,0 +1,14 @@
+/* Menghilangkan border biru default browser pada input pencarian TomSelect */
+.ts-wrapper .ts-control input {
+    display: inline-block !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Memastikan dropdown muncul di bawah kotak dengan warna yang serasi */
+.ts-dropdown {
+    @apply mt-2 rounded-xl border-2 border-gray-100 bg-white shadow-xl overflow-hidden !important;
+}
