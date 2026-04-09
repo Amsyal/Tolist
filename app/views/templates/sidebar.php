@@ -31,7 +31,7 @@
     </ul>
 
     <div class="mb-4">
-        <a href="#" class="flex w-full py-2 px-4 bg-[#ddaffc] text-center font-bold rounded-lg text-gray-800 hover:opacity-90 transition-opacity">
+        <a href="<?= BASEURL ?>Auth/logout" class="flex w-full py-2 px-4 bg-[#ddaffc] text-center font-bold rounded-lg text-gray-800 hover:opacity-90 transition-opacity">
             <i data-feather="log-out" class="mr-2"></i> logout
         </a>
     </div>
