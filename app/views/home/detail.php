@@ -50,7 +50,7 @@
 
             <!-- Tombol Aksi -->
             <div class="mt-10 flex items-center justify-between border-t border-gray-100 pt-6">
-                <a href="<?= BASEURL; ?>Home" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold transition-colors">
+                <a href="<?= BASEURL; ?>Home/index" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold transition-colors">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
                     Kembali ke Daftar
                 </a>

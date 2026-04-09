@@ -9,7 +9,7 @@ class Note_model {
     }
 
     public function getAllNote () {
-        $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY RAND(123)');
+        $this->db->query('SELECT * FROM ' . $this->table . " ORDER BY RAND({$_SESSION['seed']})");
         return $this->db->setResult();
     }
 

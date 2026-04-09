@@ -32,7 +32,7 @@ class Upload_model {
         $query = "INSERT INTO notes (user_id, course_id, title, description, file_path, tags) 
                 VALUES (:user_id, :course_id, :title, :description, :file_path, :tags)";
         
-        $tmpUserId = '1'; //user id sementara nanti ganti
+        $tmpUserId = $_SESSION['user_id']; //user id sementara nanti ganti
 
         $this->db->query($query);
         $this->db->bind('user_id', $tmpUserId); // sementara nanti ganti pake $_SESSION['user_id]
@@ -69,7 +69,7 @@ class Upload_model {
 
             if( move_uploaded_file($file['tmp_name'], $destination)) {
                 if( $this->tambahDataNote($_POST, $destination) > 0) {
-                    header('Location: ' . BASEURL . 'Home');
+                    header('Location: ' . BASEURL . 'Home/index');
                     exit;
                 }
             }

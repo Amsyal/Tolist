@@ -2,6 +2,8 @@
 
 class Upload extends Controller {
     public function index() {
+        isLogin();
+
         $data['page'] = 'upload';
         $data['courses'] = $this->model('Upload_model')->getCourses();
 

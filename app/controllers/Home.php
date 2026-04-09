@@ -3,6 +3,8 @@
 class Home extends Controller {
 
     public function index() {
+        isLogin();
+
         $data['notes'] = $this->model('Note_model')->getAllNote();
         $data['page'] = "Home";
 
@@ -15,6 +17,8 @@ class Home extends Controller {
     }
 
     public function detailNote($id) {
+        isLogin();
+
         $data['note'] = $this->model('Note_model')->getNote($id);
         $data['page'] = 'detail';
 
