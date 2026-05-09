@@ -1,4 +1,4 @@
-<div class="min-h-screen flex items-center justify-center bg-purple-100">
+<div class="min-h-screen flex items-center justify-center bg-white">
 
 <div class="w-full max-w-5xl min-h-[550px] bg-white rounded-3xl shadow-2xl grid grid-cols-1 md:grid-cols-2 overflow-hidden">
 
@@ -6,8 +6,7 @@
         <h1 class="text-6xl md:text-7xl font-bold mb-6 text-[#191944]">TOLIST</h1>
         <p class="text-base md:text-2xl font-bold text-[#191944] leading-relaxed">
             Create your account <br>
-            and start saving your notes <br>
-            on <span class="text-white font-bold">TOLIST</span>
+            and start sharing your notes <br>
         </p>
     </div>
 
@@ -23,6 +22,9 @@
             <form action="<?= BASEURL ?>Auth/prosesRegis" method="POST">
                 
                 <input type="text" name="username" placeholder="Username" required
+                    class="w-full mb-3 px-4 py-3 border-2 border-[#191944] rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
+
+                <input type="text" name="email" placeholder="Email" required
                     class="w-full mb-3 px-4 py-3 border-2 border-[#191944] rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
 
                 <input type="password" name="password" placeholder="Password" required

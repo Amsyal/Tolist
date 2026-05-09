@@ -24,10 +24,8 @@ class Auth_model {
 
             $user = $this->getUserByUsername($username);
 
-            if($user) {
-                if($pass == $user['password']) {
+            if($user && password_verify($pass, $user['password'])) {
                     return $user;
-                }
             }
         }
         return false;
@@ -36,27 +34,35 @@ class Auth_model {
     public function regisAction() {
         if( $_SERVER['REQUEST_METHOD'] == 'POST') {
             $username = $_POST['username'];
+            $email = $_POST['email'];
             $pass = $_POST['password'];
             $confirm_pass = $_POST['confirm_password'];
 
             $user = $this->getUserByUsername($username);
+            $pesan = '';
 
-            if( $pass == $confirm_pass && !$user ) {
-                $sql = "INSERT INTO users (username, password) VALUES (:username, :password)";
-
-                $this->db->query($sql);
-                $this->db->bind('username', $username);
-                $this->db->bind('password', $pass);
-                $this->db->execute();
-
-                header('Location: ' . BASEURL . 'Auth/login');
+            if( empty($username) || empty($email) || empty($pass)) {
+                $pesan = "Semua kolom wajib diisi!";
+            } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $pesan = "Format email tidak sah";
+            } elseif ( strlen($pass) < 8 ) {
+                $pesan = "Password minimal 8 karakter";
             } else {
-                echo "<script>
-                        alert('Registrasi Gagal, silakan coba lagi.');
-                      </script>";
-                      
-                header('Location: ' . BASEURL . 'Auth/regis');
-                
+                if( !($pass == $confirm_pass && !$user) ) {
+                    $pesan = "Username atau Email sudah digunakan";
+                } else {
+                    $hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
+
+                    $sql = "INSERT INTO users (username, email, password) VALUES (:username, :email, :password)";
+
+                    $this->db->query($sql);
+                    $this->db->bind('username', $username);
+                    $this->db->bind('email', $email);
+                    $this->db->bind('password', $hashed_pass);
+                    $this->db->execute();
+
+                    header('Location: ' . BASEURL . '/Auth/login');
+                }
             }
         }
     }
