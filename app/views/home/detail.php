@@ -1,7 +1,7 @@
 
 <main class="flex-1 mt-[70px] md:ml-[200px] p-6 md:p-12">
 <!-- Container Utama -->
-<div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+<div class="min-h-screen  py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
         
         <!-- Header Gambar (Jika ada file_path) -->

@@ -1,4 +1,4 @@
-<div class="min-h-screen flex items-center justify-center bg-purple-100">
+<div class="min-h-screen flex items-center justify-center bg-white">
 <div class="w-full max-w-5xl min-h-[550px] bg-white rounded-3xl shadow-2xl grid grid-cols-1 md:grid-cols-2 overflow-hidden">
 
     <!-- KIRI (TEKS) -->
@@ -10,8 +10,7 @@
 
     <p class="text-base md:text-2xl font-bold text-[#191944] leading-relaxed">
         Start writing your notes <br>
-        and save them to your <br>
-        <span class="text-white font-bold">TOLIST</span>
+        and save them to you! <br>
     </p>
 
 </div>
@@ -37,14 +36,14 @@
                     class="w-full mb-2 px-4 py-3 border-2 border-[#191944] rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
 
                 <!-- Forget -->
-                <div class="text-right mb-6">
+                <!-- <div class="text-right mb-6">
                     <a href="#" class="text-sm text-[#191944] font-bold :underline">
                         Forgot Password?
                     </a>
-                </div>
+                </div> -->
 
                 <!-- Button -->
-                <button type="submit" class="w-full bg-[#191944] hover:bg-purple-600 transition text-white py-3 rounded-lg font-semibold">
+                <button type="submit" class="w-full bg-[#191944] hover:bg-purple-600 transition text-white mt-10 py-3 rounded-lg font-semibold">
                     Login
                 </button>
 

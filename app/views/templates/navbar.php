@@ -1,4 +1,4 @@
-    <nav class="fixed top-0 z-[999] w-full h-[70px] bg-[#ddaffc] px-6 flex justify-between items-center shadow-sm">
+    <nav class="fixed top-0 z-[999] w-full h-[70px] px-6 bg-purple-700 flex justify-between items-center shadow-sm">
         <div class="flex items-center gap-4">
             <div id="hamburger" class="cursor-pointer md:hidden group">
                 <div class="w-6 h-0.5 bg-gray-600 mb-1.5 transition-all"></div>
@@ -6,7 +6,7 @@
                 <div class="w-6 h-0.5 bg-gray-600 transition-all"></div>
             </div>
             
-            <h1 class="text-2xl font-bold text-gray-800">ToList</h1>
+            <h1 class="text-2xl font-bold text-white">ToList</h1>
             
             <div class="hidden md:block ml-25 relative w-64">
                 <input type="text" 
@@ -25,3 +25,5 @@
             </a>
         </div>
     </nav>
+
+    <!-- bg-[#ddaffc]  -->

@@ -26,7 +26,7 @@ class Auth extends Controller{
 
             header('Location: ' . BASEURL . 'Home/index');
             exit;
-        } else {
+        } else {            
             header('Location: ' . BASEURL . 'Auth/login');
             exit;
         }
